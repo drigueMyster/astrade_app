@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:astrade_app/ui/login_page.dart';
+import 'package:astrade_app/ui/register_page.dart';
+import 'package:astrade_app/ui/main_page.dart';
+import 'styles/app_theme.dart' as AppTheme;
 
 void main() => runApp(MyApp());
 
@@ -20,11 +23,14 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
      // home: MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {
-        "/" : (context) => LoginPage(),
+        "/" : (context) => RegisterPage(),
+        LoginPageState.routeName : (context) => LoginPage(),
+        RegisterPageState.routeName : (context) => RegisterPage(),
+        MainPageState.routeName : (context) => MainPage(),
       },
     );
   }
