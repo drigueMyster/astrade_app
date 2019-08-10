@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:astrade_app/ui/login_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+     // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        "/" : (context) => LoginPage(),
+      },
     );
   }
 }
